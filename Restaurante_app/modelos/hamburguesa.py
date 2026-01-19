@@ -42,7 +42,7 @@ class Hamburguesa(Producto):
         self.ingredientes.append(ingrediente)
         nuevo_precio = self.obtener_precio() + costo_extra
         self.establecer_precio(nuevo_precio)
-        return f"✅ {ingrediente} agregado. Nuevo precio: ${nuevo_precio:.2f}"
+        return f" {ingrediente} agregado. Nuevo precio: ${nuevo_precio:.2f}"
     
     def obtener_detalles(self) -> str:
         """Detalles específicos de la hamburguesa."""

@@ -17,7 +17,7 @@ class Restaurante:
         self.__contador_pedidos += 1
         nuevo_pedido = Pedido(self.__contador_pedidos, cliente)
         self.__pedidos.append(nuevo_pedido)
-        print(f"📋 Pedido #{nuevo_pedido.numero_pedido} creado para {cliente}")
+        print(f"Pedido #{nuevo_pedido.numero_pedido} creado para {cliente}")
         return nuevo_pedido
     
     def procesar_pedido(self, numero_pedido: int) -> List[str]:
@@ -28,7 +28,7 @@ class Restaurante:
                 pedido.cambiar_estado("listo")
                 self.__registrar_venta(pedido.obtener_total())
                 return resultados
-        return ["❌ Pedido no encontrado"]
+        return ["Pedido no encontrado"]
     
     def __registrar_venta(self, monto: float) -> None:
         """Método privado para registrar ventas (encapsulación)."""
@@ -55,7 +55,7 @@ class Restaurante:
         pedidos_completados = len([p for p in self.__pedidos if hasattr(p, 'estado')])
         
         estadisticas = [
-            f"\n📊 ESTADÍSTICAS - {self.nombre}",
+            f"\n ESTADÍSTICAS - {self.nombre}",
             f"══════════════════════════════════════",
             f"Total pedidos creados: {total_pedidos}",
             f"Último número de pedido: {self.__contador_pedidos}",

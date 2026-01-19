@@ -13,11 +13,11 @@ def main():
     print("=" * 20)
     
     # Crear restaurante
-    print("\n🏪 INICIANDO RESTAURANTE...")
+    print("\n INICIANDO RESTAURANTE...")
     restaurante = Restaurante("Restaurante")
     
     # Crear productos disponibles
-    print("\n📦 CREANDO PRODUCTOS DISPONIBLES:")
+    print("\n CREANDO PRODUCTOS DISPONIBLES:")
     
     # Hamburguesas
     hamburguesa_clasica = Hamburguesa(
@@ -45,15 +45,15 @@ def main():
                  refresco_cola, jugo_naranja, agua_mineral]
     
     for producto in productos:
-        print(f"  ✅ {producto.obtener_info()}")
+        print(f"   {producto.obtener_info()}")
     
     # Procesar pedidos
     print("\n" + "=" * 20)
-    print("📝 PROCESANDO PEDIDOS DE CLIENTES")
+    print(" PROCESANDO PEDIDOS DE CLIENTES")
     print("=" * 20)
     
     # Pedido 1
-    print("\n👤 CLIENTE: Alejandro Moreno")
+    print("\n CLIENTE: Alejandro Moreno")
     pedido1 = restaurante.crear_pedido("Alejandro Moreno")
     pedido1.agregar_producto(hamburguesa_clasica)
     pedido1.agregar_producto(refresco_cola)
@@ -63,7 +63,7 @@ def main():
     print(hamburguesa_clasica.agregar_ingrediente_extra("pepinillos", 0.50))
     
     # Pedido 2
-    print("\n👤 CLIENTE: María Gómez")
+    print("\n CLIENTE: María Gómez")
     pedido2 = restaurante.crear_pedido("María Gómez")
     pedido2.agregar_producto(hamburguesa_especial)
     pedido2.agregar_producto(jugo_naranja)
@@ -75,7 +75,7 @@ def main():
     
     # Mostrar resumen de pedidos
     print("\n" + "=" * 20)
-    print("📋 RESUMEN DE PEDIDOS")
+    print("RESUMEN DE PEDIDOS")
     print("=" * 20)
     
     print("\n" + pedido1.obtener_resumen())
@@ -83,7 +83,7 @@ def main():
     
     # Procesar pedidos (demostrar polimorfismo)
     print("\n" + "=" * 20)
-    print("👨‍🍳 PREPARANDO PEDIDOS")
+    print("PREPARANDO PEDIDOS")
     print("=" * 20)
     
     for pedido in [pedido1, pedido2]:
@@ -94,7 +94,7 @@ def main():
     
     # Demostrar búsqueda
     print("\n" + "=" * 20)
-    print("🔍 BUSCANDO PEDIDOS DE 'Alejandro Moreno'")
+    print("BUSCANDO PEDIDOS DE 'Alejandro Moreno'")
     print("=" * 20)
     
     pedidos_alejandro = restaurante.buscar_pedido_por_cliente("Alejandro Moreno")
@@ -115,15 +115,15 @@ def main():
     
     # Estadísticas del restaurante
     print("\n" + "=" * 20)
-    print("📊 REPORTE FINAL DEL SISTEMA")
+    print("REPORTE FINAL DEL SISTEMA")
     print("=" * 20)
     
     print(restaurante.mostrar_estadisticas())
     
    
-    print("\n" + "=" * 20)
-    print("✅ SISTEMA EJECUTADO CORRECTAMENTE")
-    print("=" * 20)
+    print("\n" + "=" * 50)
+    print("SISTEMA EJECUTADO CORRECTAMENTE")
+    print("=" * 50)
 
 if __name__ == "__main__":
     main()

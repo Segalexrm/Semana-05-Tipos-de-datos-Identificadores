@@ -20,7 +20,7 @@ class Pedido:
         """Agrega un producto al pedido."""
         self.__productos.append(producto)
         self.__calcular_total()
-        return f"✅ {producto.nombre} agregado al pedido #{self.numero_pedido}"
+        return f" {producto.nombre} agregado al pedido #{self.numero_pedido}"
     
     def eliminar_producto(self, nombre_producto: str) -> bool:
         """Elimina un producto del pedido."""
@@ -50,12 +50,12 @@ class Pedido:
     def preparar_pedido(self) -> List[str]:
         """Prepara todos los productos del pedido (polimorfismo)."""
         resultados = []
-        resultados.append(f"\n🍽️ Preparando pedido #{self.numero_pedido} para {self.cliente}")
+        resultados.append(f"\n Preparando pedido #{self.numero_pedido} para {self.cliente}")
         
         for producto in self.__productos:
             resultados.append(f"\n🔹 {producto.nombre}:")
             resultados.append(producto.preparar())
-            resultados.append(f"   ⏰ Tiempo estimado: {producto.calcular_tiempo_preparacion()} min")
+            resultados.append(f"   Tiempo estimado: {producto.calcular_tiempo_preparacion()} min")
         
         self.__estado = "en preparación"
         return resultados
